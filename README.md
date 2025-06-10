@@ -15,14 +15,14 @@ _(Replace with your actual Vercel URL)_
 - HTML5 & CSS3
 
 ## 📂 Project Structure
-
+```text
 src/
 ├── assets/
 ├── components/
 ├── services/
 ├── App.jsx
 └── main.jsx
-
+```
 
 ## 📌 Features
 
@@ -42,3 +42,7 @@ git clone https://github.com/NoemiDR24/Noemi-Portfolio-Frontend.git
 cd Noemi-Portfolio-Frontend
 npm install
 npm run dev
+```
+
+## 📬 Contact
+Feel free to connect with me on [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/noemidelgadilloroldan/)
