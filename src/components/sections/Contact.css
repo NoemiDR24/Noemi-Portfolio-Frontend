@@ -1,0 +1,225 @@
+#contact {
+	padding: 50px 0;
+    background: #f8f9fa;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact-section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInContact 0.8s ease-out forwards;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #5f6368;
+    margin-bottom: 15px;
+}
+
+.form-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.greeting{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.greeting h3{
+    color: #425BB5;
+}
+
+/* ------------------------------
+   Contact Form
+------------------------------ */
+
+.contact-form {
+    max-width: 740px; 
+    text-align: center; 
+}
+
+fieldset {
+    border: none;
+    padding: 20px;
+}
+
+.info{
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+ .info-phone, .info-email{
+    max-width: 50%;
+ }
+
+
+.form-field{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+    
+}
+
+.contact-form ::-webkit-input-placeholder {
+	color: #96989b;
+}
+.contact-form :-moz-placeholder {
+	color: #96989b;
+}
+.contact-form ::-moz-placeholder {
+	color:#96989b;
+}
+.contact-form :-ms-input-placeholder {
+	color: #96989b;
+}
+.contact-form .placeholder {
+	color: #96989b !important;
+}
+
+.contact-form textarea::placeholder {
+     font-family: 'Open Sans', sans-serif ! important;
+    color: #96989b;
+    font-size: 16px;
+}
+
+
+.form-control{
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: none; 
+    border-bottom: .5px solid grey;
+    background-color: transparent; 
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-bottom: 2px solid #425BB5;
+    outline: none;    
+    transition: all 0.3s ease;
+}
+
+.btn-submit {
+    display: block;
+    margin: 20px auto; 
+    background-color: black;
+    color: #fff;
+    padding: 14px 40px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #425BB5, #2D4373);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.phone, .email {
+    font-size: 24px;
+    color: #425BB5;
+    padding-right: 15px;
+}
+
+.green {
+  color: green;
+  transition: opacity 0.5s ease;
+}
+
+.red {
+  color: red;
+  transition: opacity 0.5s ease;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+
+/* ------------------------------
+   Animation
+------------------------------ */
+@keyframes fadeInContact {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------------
+   Responsive Styles
+------------------------------ */
+@media (max-width: 768px) {
+    .contact-form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .info-phone, .info-email {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .btn-submit {
+        width: auto;
+        padding: 12px 30px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact {
+        padding: 50px 0;
+    }
+
+    .form-control {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        padding: 10px 25px;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .info-phone, .info-email {
+        max-width: 100%;
+    }
+
+    .phone, .email {
+        font-size: 20px;
+    }
+}

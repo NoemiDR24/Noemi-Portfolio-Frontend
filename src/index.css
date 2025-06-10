@@ -1,0 +1,78 @@
+/* Google fonts & font family
+==================================================*/
+
+@import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i';
+
+/*
+font-family: 'Playfair Display', serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+
+/* typography
+==================================================*/
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    line-height: 70px;
+}
+
+h4 {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    position: relative;
+    color: #425BB5;
+    margin-left: 40px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+h4:before {
+    position: absolute;
+    width: 30px;
+    left: -40px;
+    content: "";
+    display: block;
+    height: 2px;
+    background: #425BB5;
+    top: 9px;
+}
+
+h3{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+	color: #425BB5;
+    margin-bottom: 0;
+    font-family: "poppins-regular", sans-serif;
+}
+
+
+/* General
+==================================================*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.size-50 {
+    font-size: 50px;
+    line-height: 50px
+}
+
+.h-50 {
+    height: 50px;
+}
+

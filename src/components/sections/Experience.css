@@ -1,0 +1,200 @@
+
+#experience {
+    padding: 50px 0;
+    background: #f3f3f3;
+}
+
+.timeline-header p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2f3031;
+    text-align: center;
+}
+
+.timeline-content p, .timeline-content ul{
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2f3031;
+}
+
+
+.timeline-wrap {
+	position: relative;
+	margin-top: 1.5rem;
+	margin-bottom: 6rem;
+}
+
+
+.timeline-wrap::before {
+	content: "";
+	display: block;
+	width: 3px;
+	height: 100%;
+	 background: linear-gradient(to bottom, #425BB5, #1a1a1a);
+	position: absolute;
+	left: 41%;
+	top: 0;
+}
+
+
+.timeline-block {
+	position: relative;
+	padding-top: 1.5rem;
+	opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInTimeline 0.8s ease-out forwards;
+}
+
+.timeline-ico {
+	height: 4.8rem;
+	width: 4.8rem;
+	line-height: 4.8rem;
+	background: #313131;
+	border-radius: 50%;
+	text-align: center;
+	color: #FFFFFF;
+	position: absolute;
+	left: 41%;
+	top: .9rem;
+	margin-left: -2.4rem;
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.timeline-ico:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-ico i {
+	position: relative;
+	left: .05rem;
+	top: .2rem;
+}
+
+.timeline-header {
+	float: left;
+	width: 35%;
+	text-align: right;
+ 
+}
+
+.timeline-content {
+	margin-left: 40%;
+	padding-left: 110px;
+}
+
+.timeline-header h2 {
+	position: relative;
+	text-align: left;
+}
+
+.timeline-content h2 {
+
+	position: relative;
+	padding-bottom: 1.8rem;
+}
+.timeline-content h2::after {
+	content: "";
+	display: block;
+	height: 3px;
+	width: 50px;
+	background: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+/* ------------------------------
+   Animation
+------------------------------ */
+@keyframes fadeInTimeline {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------------
+   Responsive Styles
+------------------------------ */
+@media only screen and (max-width:1024px) {
+	.timeline-header {
+		padding-right: 50px;
+        line-height: 2.2rem;
+	}
+	.timeline-header h2 {
+		font-size: 1.8rem;
+	}
+	.timeline-header p {
+		font-size: 1.1rem;
+	}
+	.timeline-content {
+		padding-left: 70px;
+        font-size: 1.1rem;
+	}
+    .timeline-content p{
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (max-width:768px) {
+    .timeline-wrap::before {
+		left: 2.4rem;
+	}
+	.timeline-ico {
+		left: 2.4rem;
+	}
+	.timeline-header {
+		float: none;
+		width: auto;
+		padding-right: 15px;
+		text-align: center;
+	}
+	.timeline-header h2 {
+		font-size: 1.8rem;
+	}
+	 .timeline-header p {
+		font-size: .95rem;
+		margin-bottom: 1.9rem;
+	}
+	 .timeline-content {
+		margin: 0;
+		padding-left: 40px;
+	}
+	 .timeline-content h2 {
+		padding-bottom: 0.5rem;
+		padding-top: 2.5rem;
+		margin-bottom: .6rem;
+		font-size: 1.6rem;
+	}
+	.timeline-content h2::after {
+		bottom: auto;
+		top: 0;
+	}
+	 .timeline-header,  .timeline-content {
+		padding-left: 6.5rem;
+	}
+}
+@media only screen and (max-width:480px) {
+	.timeline-wrap::before {
+		left: 1.8rem;
+	}
+	 .timeline-ico {
+		height: 3.6rem;
+		width: 3.6rem;
+		line-height: 3.6rem;
+		left: 1.8rem;
+		margin-left: -1.8rem;
+		font-size: 1.3rem;
+	}
+	 .timeline-header, .timeline-content {
+		padding-left: 5.5rem;
+	}
+
+    .timeline-header{
+        text-align: center;
+    }
+}
