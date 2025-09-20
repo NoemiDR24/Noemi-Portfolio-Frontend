@@ -207,13 +207,15 @@
 @media (max-width: 768px) {
     .project-details-container {
         padding: 16px;
+        align-items: flex-start;
     }
     
     .project-details {
         padding: 20px;
         max-width: 90%;
-        max-height: 85vh;
+        max-height: 80vh;
         border-radius: 8px;
+         margin-top: 10px
     } 
   
     .project-content {
