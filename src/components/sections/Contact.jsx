@@ -1,6 +1,6 @@
 import './Contact.css'
 import { useState } from 'react';
-import { submitContactForm } from "../../services/ContactService.js"; 
+// import { submitContactForm } from "../../services/ContactService.js"; 
 
 function Contact(){
     const [form, setForm] = useState({
@@ -19,31 +19,69 @@ function Contact(){
         });
     };
 
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //         const response = await submitContactForm(form);
+    //         console.log("Mensaje guardado:", response); 
+    //         setSubmit(true);
+    //         //Clears previous messages
+    //         setErrorMessage(false); 
+    //         setForm({ name: "", email: "", message: "" });
+
+    //             //Hide message after 3 seconds
+    //             setTimeout(() => {
+    //                     setSubmit(false);
+    //                 }, 3000);
+
+    //     } catch (error) {
+    //         console.error("Error:", error);
+    //         setErrorMessage(true);
+    //         //Clears previous messages
+    //         setSubmit(false);
+
+    //             //Hide message after 3 seconds
+    //             setTimeout(() => {
+    //                 setErrorMessage(false);
+    //             }, 3000);
+    //     }
+    // };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        const formData = new FormData();
+        formData.append('form-name', 'contact');
+        formData.append('name', form.name);
+        formData.append('email', form.email);
+        formData.append('message', form.message);
+
         try {
-            const response = await submitContactForm(form);
-            console.log("Mensaje guardado:", response); 
-            setSubmit(true);
-            //Clears previous messages
-            setErrorMessage(false); 
-            setForm({ name: "", email: "", message: "" });
+            const response = await fetch('/', {
+                method: 'POST',
+                body: formData
+            });
 
-                //Hide message after 3 seconds
+            if (response.ok) {
+                console.log("Mensaje enviado exitosamente");
+                setSubmit(true);
+                setErrorMessage(false); 
+                setForm({ name: "", email: "", message: "" });
+
                 setTimeout(() => {
-                        setSubmit(false);
-                    }, 3000);
-
+                    setSubmit(false);
+                }, 3000);
+            } else {
+                throw new Error('Form submission failed');
+            }
         } catch (error) {
             console.error("Error:", error);
             setErrorMessage(true);
-            //Clears previous messages
             setSubmit(false);
 
-                //Hide message after 3 seconds
-                setTimeout(() => {
-                    setErrorMessage(false);
-                }, 3000);
+            setTimeout(() => {
+                setErrorMessage(false);
+            }, 3000);
         }
     };
 
@@ -60,7 +98,13 @@ function Contact(){
                 </div> 
                 
                 <div className='form-container'>
-                    <form className="contact-form" name="contact" method="post" noValidate="novalidate" onSubmit={handleSubmit}>
+                    <form className="contact-form" 
+                          name="contact" 
+                          method="POST" 
+                          data-netlify="true" 
+                          onSubmit={handleSubmit}
+                    >
+                        <input type="hidden" name="form-name" value="contact" />
                         <fieldset> 
                             <div className='form-field'> 
                                 <input type="text" name="name" className="form-control" placeholder="Name" value={form.name} onChange={handleChange} minLength={2} required/>

@@ -1,10 +1,12 @@
 import './ProjectDetails.css'
 
 function ProjectDetails({ project, onClose }) {
-  const technologiesArray = project.technologies 
-      ? project.technologies.split(",").map((tech) => tech.trim()) 
-      : [];
+  // const technologiesArray = project.technologies 
+  //     ? project.technologies.split(",").map((tech) => tech.trim()) 
+  //     : [];
 
+  const technologiesArray = project.technologies || [];
+  
   return (
     <div className="project-details-container">
       <div className="project-details">
