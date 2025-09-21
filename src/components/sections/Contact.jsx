@@ -130,10 +130,10 @@ function Contact(){
 
                     <div className='info'>
 
-                        <div className='info-phone'>
+                        {/* <div className='info-phone'>
                             <h3><i className="fas fa-phone-alt phone"></i>Phone Number</h3>
-                            <p>(614) 815 - 6576</p>
-                        </div>
+                            <p></p>
+                        </div> */}
                         <div className='info-email'>
                             <h3><i className="fas fa-envelope email"></i>Email</h3>
                             <p>delgadilloroldannoemi@gmail.com</p>                

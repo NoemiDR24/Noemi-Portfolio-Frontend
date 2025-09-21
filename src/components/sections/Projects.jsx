@@ -34,7 +34,7 @@ function Projects(){
             title: "Prince of Peace Baptist Church Website",           
             description: "FA modern, responsive website for Prince of Peace Baptist Church built to connect our community and share our mission.",
             imageUrl:"/images/church.jpg",
-            technologies: ["Java", "React", "HTML", "CSS"],
+            technologies: ["Java", "React", "HTML", "CSS", "Vite"],
             repoUrl: "https://github.com/NoemiDR24/Prince-of-Peace-Baptist-Church-Website",
             demoUrl: ""
         },
@@ -43,7 +43,7 @@ function Projects(){
             title: "TEnmo",           
             description: "A command-line application that allows users to send and request virtual money ('TE Bucks') from other users. Includes authentication, secure transactions, and a RESTful API.",
             imageUrl:"/images/tenmo.png",
-            technologies: ["Java", "React", "PostgreSQL", "Spring Boot", "HTML","Vite", "CSS" , "JDBC", "REST API"],
+            technologies: ["Java", "PostgreSQL", "Spring Boot", "HTML","Vite", "CSS" , "JDBC", "REST API"],
             repoUrl: "",
             demoUrl: ""
         },
