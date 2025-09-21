@@ -76,3 +76,12 @@ body {
     height: 50px;
 }
 
+/* Avoiding horizontal scroll  */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
