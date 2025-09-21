@@ -2,4 +2,7 @@ main, .container, #root > div {
   padding-top: 65px; 
 }
 
+body {
+  overflow-x: hidden !important;
+}
 
