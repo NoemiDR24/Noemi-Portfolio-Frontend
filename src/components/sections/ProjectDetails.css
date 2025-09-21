@@ -212,7 +212,8 @@
     
     .project-details {
         padding: 20px;
-        max-width: 90%;
+        max-width: 90vm;
+        width: 90vw;
         max-height: 80vh;
         border-radius: 8px;
          margin-top: 10px
